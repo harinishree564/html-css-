@@ -1,0 +1,52 @@
+
+inputbox
+<input type = "text" value={{name}} disabled={{disabledBox}}>
+<input type = "text" [value]="name" [disabled]="disabledBox">
+
+<button (click)="enableInput()"> enable me</button>
+<input id ="text" [placeholder]="disabledBox">
+
+
+component.ts
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+name="harini"
+disabledBox=true
+
+enableInput(){
+  this.disabledBox=false
+  
+}}
+
+html for ngif n ngfor
+<h1 *ngIf="day else elseBlock">hello</h1>
+<h1>bye</h1>
+<ng-template #elseBlock>
+  <h1>content to render when condition is false</h1>
+</ng-template>
+
+
+<h1 *ngIf="displayName">hai</h1>
+<ng-template #else></ng-template>
+
+
+
+ngfor ngIf
+<h4 *ngFor="let name of names">
+  {{name.fName}}
+  {{name.age}}
+</h4>
+<h1 *ngIf="day=='tomorrow' else elseblock">
+  app
+</h1>
+<ng-template #elseblock>
+  <h1>hello</h1>
+</ng-template>
