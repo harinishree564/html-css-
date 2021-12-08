@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+}
+div h1{
+    color:lawngreen;
+}
+div+p{
+    color: blue;
+}
+ul>li{
+    color:coral
+}
+div~p{
+    color:darkgoldenrod;
+}
+.one,.two{
+    color:darkmagenta;
+}
+a:hover{
+    color:darkslategrey;
+}
+a:visited{
+    color:deeppink;
+}
+p::first-letter{
+    color:forestgreen;
+}
+p::after{
+    content: "+";
+}
+p::before{
+    content: "*"
+}
+li:first-child{
+    font-size: 2rem;
+}
+p:nth-of-type(even){
+    color:lavender;
+}
